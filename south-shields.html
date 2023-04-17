@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script async src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script async src="js/script.js"></script>
+    <title>Cuisine Connoisseur</title>
+</head>
+
+<body>
+    <!-- 
+    Following Tania Ruscia's tutorial on creating your own responsive dropdown navigation bar. https://www.taniarascia.com/responsive-dropdown-navigation-bar/
+    -->
+    <div class="nav-wrapper">
+        <div class="grad-bar"></div>
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="#!">LOGO</a>
+                </div>
+                <nav>
+                    <div class="nav-mobile">
+                        <a id="nav-toggle" href="#!"><span></span></a>
+                    </div>
+                    <ul class="nav-list">
+                        <!-- Setting the links to #! will ensure that no action takes place on click. -->
+                        <li><a href="#!">Home</a></li>
+                        <li><a href="#!" class="active">About</a></li>
+                        <li><a href="#!">Korea</a></li>
+                        <li><a href="#!">Jamaica</a></li>
+                        <li><a href="#!">United Kingdom</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="#!">Manachester</a></li>
+                                <li><a href="#!">South Shields</a></li>
+                                <li><a href="#!">Staffordshire</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    </div>
+    </section>
+    </div>
+    <main>
+        <h1>South Shields</h1>
+
+    </main>
+    <footer>
+        <h4>Contact Cuisine Connoisseur</h4>
+        <h5 class="footer-title">Contact Us</h5>
+        <ul class="footer-list">
+            <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+            <li><i class="fas fa-envelope"></i> info@example.com</li>
+        </ul>
+        </div>
+        <div>
+            <p class="footer-text">Join our foodie community for delicious adventures!</p>
+    </footer>
+</body>
+
+</html>
