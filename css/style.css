@@ -64,10 +64,10 @@ nav ul li ul li a {
 .nav-mobile {
     display: none;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 13px;
+    right: 8px;
     background: #fff;
-    height: 70px;
+    height: 75px;
     width: 70px;
 }
 
