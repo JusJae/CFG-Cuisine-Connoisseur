@@ -253,17 +253,22 @@ nav ul li ul li a {
 
 .gallery-cell {
     width: 66%;
-    height: 200px;
+    height: 400px;
     margin-right: 10px;
     background: #8C8;
     counter-increment: gallery-cell;
 }
+.gallery-cell img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: conver;}
 
 /* cell number */
 .gallery-cell:before {
     display: block;
     text-align: center;
-    content: counter(gallery-cell);
+    content: "";
     line-height: 200px;
     font-size: 80px;
     color: white;
@@ -294,11 +299,27 @@ nav ul li ul li a {
     width: 100%;
     height: 50vh;
     min-height: 350px;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1435224668334-0f82ec57b605?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('/assets/images/jamaica/jerk-chicken.jpg');
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.headline h1 {
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+}
+.headline p {
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
 }
 
 .features {
@@ -313,10 +334,14 @@ nav ul li ul li a {
 .feature-container {
     flex-basis: 30%;
     margin-top: 10px;
+    border: solid 2px #000;
+    padding: 10px;
+    text-align: center;
+    
 }
 
 .feature-container p {
-    color: #000;
+    color: black;
     text-align: center;
     line-height: 1.4;
     margin-bottom: 15px;
@@ -327,3 +352,50 @@ nav ul li ul li a {
     margin-bottom: 15px;
 }
 
+/* CSS styles for the footer */
+.footer {
+    background-color: #222;
+    padding: 40px 0;
+    color: #fff;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.footer-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-list i {
+    margin-right: 10px;
+    color: #ffd700;
+}
+
+.footer-text {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer-text a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    color: #ffd700;
+}
