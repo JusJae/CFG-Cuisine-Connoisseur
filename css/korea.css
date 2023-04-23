@@ -253,7 +253,15 @@ nav ul li ul li a {
     justify-content: space-around;
     position: relative;
     top: 10%;
+
 }
+/* .hero-header {
+    width: 0%;
+    height: 500px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+} */
 
 .hero-header h1 {
     position: relative;

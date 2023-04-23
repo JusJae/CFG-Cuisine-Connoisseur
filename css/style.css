@@ -9,6 +9,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
     font-family: Tahoma, 'Roboto', sans-serif !important;
     font-weight: 300;
+    text-align: center;
 }
 
 p {
@@ -53,16 +54,13 @@ nav ul li a {
     border: solid 1px transparent;
     text-decoration: none;
     font-family: "Roboto", sans-serif;
-    margin-top: 5px;
 
-    /*
-  The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
-  */
+    /* transition: all 0.3s ease-in-out; */
 }
 
 nav ul li a:hover {
     background: #f2f2f2;
-    color: #fb5958;
+    color: #E73C7E;
     border: solid 1px #f2f2f2;
     border-radius: 5px;
 }
@@ -87,6 +85,7 @@ nav ul li ul li a {
     /* Guarantees that the dropdown will display on top of any content. */
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
     display: none;
+
 }
 
 .nav-mobile {
@@ -99,7 +98,7 @@ nav ul li ul li a {
     width: 70px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 724px) {
     .nav-mobile {
         display: block;
     }
@@ -122,9 +121,15 @@ nav ul li ul li a {
         line-height: 20px;
     }
 
+    nav ul li a {
+        font;
+}
+
+
     nav ul li ul li a {
         padding-left: 30px;
     }
+    
 }
 
 #nav-toggle {
@@ -174,10 +179,21 @@ nav ul li ul li a {
     transform: rotate(-45deg);
 }
 
-@media screen and (min-width: 800px) {
+.brand a {
+    color: #463f3f;
+    text-decoration: none;
+    font-family: Tahoma;
+    font-weight: 400;
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+@media screen and (min-width: 725px) {
     .nav-list {
         display: block !important;
     }
+
+
 }
 
 /* 
@@ -186,6 +202,7 @@ nav ul li ul li a {
 .navigation {
     height: 75px;
     background: rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 5px 5px ;
 }
 
 /*
@@ -293,12 +310,15 @@ nav ul li ul li a {
     margin-right: 10px;
     background: lightgray;
     counter-increment: gallery-cell;
+    border-radius: 5px;
 }
 .gallery-cell img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: conver;}
+    object-fit: cover;
+    border-radius: 5px;
+}
 
 
 .gallery-cell:before {
@@ -326,7 +346,12 @@ nav ul li ul li a {
 }
 
 .about-container {
-    margin: 10px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .125);
+    border: solid 1px rgba(0, 0, 0, .125);
+    border-radius: 5px;
 }
 
 .card-container {
@@ -343,7 +368,7 @@ nav ul li ul li a {
     object-fit: cover;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 724px) {
     .card-container {
         flex-wrap: wrap;
     }
@@ -358,12 +383,18 @@ nav ul li ul li a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     position: relative; 
+    transition: translate box-shadow .25s;
+}
+
+.card:hover, 
+.card:focus {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px) translateX(-5px);
 }
 
 /* JAMAICA PAGE */
 
 .headline {
-    width: 100%;
     height: 50vh;
     min-height: 350px;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('/assets/images/jamaica/jerk-chicken.jpg');
@@ -371,10 +402,14 @@ nav ul li ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: solid 1px rgba(0, 0, 0, .125);
+    border-radius: 5px;
+    margin: 10px;
 }
+
 .headline h1 {
     color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     text-align: center;
     font-size: 3em;
     margin: 0;
@@ -389,12 +424,24 @@ nav ul li ul li a {
     padding: 0 5rem;
 }
 
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .125);
+    border: solid 1px rgba(0, 0, 0, .125);
+    border-radius: 5px;
+}
 .info-container h2{
     font-family: 'Segoe UI', Tahoma, sans-serif;
     text-align: center;
     font-size: 2em;
     margin: 10px;
-    padding: 0;
+    padding: 10px;
 }
 
 .info-container p {
@@ -405,17 +452,27 @@ nav ul li ul li a {
     padding: 0;
 }
 .map {
-    width: 100%;
-    height: 100%;
+    width: 90vw;
+    height: 20rem;
     border: none;
+    margin: 15px;
+    border: solid 1px rgba(0, 0, 0, .125);
+    border-radius: 5px;
 }
 
+.map-iframe {
+    width: 100%;
+    height: 100%;
+    border: solid 1px rgba(0, 0, 0, .125);
+        border-radius: 5px;
+}
 .jamaica-subheader h3{
     font-family: 'Segoe UI', Tahoma, sans-serif;
         text-align: center;
         font-size: 1.5em;
         margin: 10px;
-        padding: 0;
+
+        padding-top: 10px;
 }
 
 .features {
@@ -425,8 +482,8 @@ nav ul li ul li a {
     position: relative;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-flex-direction: row;
+    flex-direction: row;
     padding: 50px 20px;
     justify-content: space-around;
     flex: wrap;
@@ -469,6 +526,234 @@ nav ul li ul li a {
     margin-bottom: 15px;
 }
 
+@media screen and (max-width: 724px) {
+.features {
+        width: 100%;
+        height: auto;
+        min-height: 350px;
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 50px 20px;
+        justify-content: space-between;
+        flex: wrap;
+        
+    }
+
+        .headline h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+    
+        .headline p {
+            font-size: 1em;
+            margin: 1rem;
+        }
+}
+
+/* KOREA PAGE */
+
+.hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+
+}
+
+.hero-header {
+    position: relative
+}
+
+.hero-header {
+    width: 0%;
+    height: 500px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.hero-header h1 {
+    position: relative;
+    font-size: 2em;
+    /* top: 80px;
+    left: 25px; */
+    width: 33vw;
+    display: inline-flexbox;
+}
+
+.hero-header h1 span {
+    color: #cd3896
+}
+
+.hero-header p {
+    width: 195px;
+    padding: 5px;
+    text-align: justify;
+    font-size: 14px;
+    position: relative;
+    display: inline-flex;
+    margin: 10px;
+    /* background-color: rgba(0, 0, 0, .9);
+    color: #fff; */
+}
+
+.hero-header .hero_btn {
+    background: #cd3896;
+    margin: 10px;
+    padding: 10px 10px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    align-items: baseline;
+    /*position: relative; */
+    /* top: 200px;
+    left: 25px; */
+    color: #fff;
+    text-decoration: none;
+      display: inline-block;
+}
+
+.hero-img {
+    width: 100%;
+    /* height: 500px; */
+    background: url(../images/korea.jpg) no-repeat center center/cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+} */
+
+.recipe-category h2 {
+    position: relative;
+    text-align: center;
+    text-overflow: 0;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #cd3896;
+    padding: 10px;
+}
+
+
+.recipe-category {
+    width: 100%;
+    height: auto;
+    margin: 25px 0;
+}
+
+.recipe-category h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.recipe-category .blog_box {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.recipe-category .blog_card {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.recipe-category .blog_card .blog_img {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.recipe-category .blog_card .blog_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media screen and (max-width: 724px){
+    .hero {
+        display: block;
+        position: relative;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        min-height: 350px;
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 50px 20px;
+        justify-content: space-between;
+        flex: wrap;
+    }
+    .hero-header {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 50px 20px;
+        justify-content: space-between;
+        flex: wrap;
+    }
+    
+    .hero_img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 50px 20px;
+        justify-content: space-between;
+        flex: wrap;
+    }
+    .recipe-category .blog_box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Staffordshire page differences */
+.staff-hero {
+    display: block;
+    position: relative;
+    justify-content: center;
+    top: 10%;
+}
+
+.staff-hero h1 {
+    position: relative;
+    font-size: 55px;
+    top: 80px;
+    left: 25px;
+}
+
+.staff-hero p {
+    width: 650px;
+    text-align: center;
+    line-height: 22px;
+    position: relative;
+    top: 125px;
+    left: 125px;
+}
+
+.staff-hero .hero_img {
+    position: relative;
+    top: 80px;
+    left: 30px;
+}
+
 /* FOOTER */
 
 footer {
@@ -499,14 +784,13 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
-
+    align-items: center;
 }
 
 .footer-list i {
-    margin: 0 10px 10px 0;
+    /* margin: 0 10px 10px 0; */
     color: #ffd700;
-    
+    margin-right: 10px;
 }
 
 .footer-text {
